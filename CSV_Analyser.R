@@ -25,7 +25,7 @@ for(i in 2:100001)
     {
       Node=paste(0,Node_Counter,sep="")
     }
-    File_Path = paste("C:\\Users\\Picard\\Dropbox\\Github\\Collatz_Conjecture_CSV_Analyser\\Results\\14N100000S\\",i,"_",Node,".csv", sep="")
+    File_Path = paste("C:\\Users\\Picard\\Dropbox\\Github\\Collatz_Conjecture_CSV_Analyser\\Results\\13N100000S\\",i,"_",Node,".csv", sep="")
     This_Seed <- read.csv(File_Path)
     if(Node_Counter==1)
     {
@@ -90,12 +90,12 @@ for(i in 2:100001)
     if(Node_Counter==13)
     {
       Node_13_Temp=rbind(Node_13_Temp,This_Seed[1,])
-      #Node_Counter=0;
+      Node_Counter=0;
     }
     if(Node_Counter==14)
     {
       Node_14_Temp=rbind(Node_14_Temp,This_Seed[1,])
-      Node_Counter=0;
+      #Node_Counter=0;
     }
     if(Node_Counter==15)
     {
@@ -149,4 +149,4 @@ Data_Store=rbind(Data_Store,cbind(Node_13_Temp[,1],Node_13_Temp[,4]))
 Data_Store=rbind(Data_Store,cbind(Node_14_Temp[,1],Node_14_Temp[,4]))
 Data_Store=rbind(Data_Store,cbind(Node_15_Temp[,1],Node_15_Temp[,4]))
 plot(Data_Store, type="o", col="green")
-write.csv(Data_Store, "C:\\Users\\Picard\\Dropbox\\Github\\Collatz_Conjecture_CSV_Analyser\\Results\\14N100000S.CSV", row.names = FALSE)
+write.csv(Data_Store, "C:\\Users\\Picard\\Dropbox\\Github\\Collatz_Conjecture_CSV_Analyser\\Results\\13N100000S.CSV", row.names = FALSE)
